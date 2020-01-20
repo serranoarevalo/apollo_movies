@@ -7,18 +7,13 @@ const GET_MOVIES = gql`
   {
     movies {
       id
-      title
-      rating
-      description_intro
-      language
       medium_cover_image
-      genres
     }
   }
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_MOVIES);
+  const { loading, data } = useQuery(GET_MOVIES);
   return (
     <>
       <div

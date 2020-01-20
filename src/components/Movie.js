@@ -7,9 +7,9 @@ function Movie({ id, medium_cover_image }) {
     <div className="column is-one-fifth">
       <Link to={`/${id}`}>
         <div
-          className="has-background-grey-light card"
+          className="has-background-dark card"
           style={{
-            height: 300,
+            height: 350,
             backgroundImage: `url(${medium_cover_image})`,
             backgroundSize: "cover",
             borderRadius: 5
