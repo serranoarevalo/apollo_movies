@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import Movie from "../components/Movie";
 
 const GET_MOVIES = gql`
   {
@@ -30,7 +31,7 @@ export default () => {
           <div className="container has-text-centered">
             <h1
               className="title has-text-white"
-              style={{ marginBottom: 50, fontSize: 60 }}
+              style={{ marginBottom: 40, fontSize: 60 }}
             >
               Apollo Movies
             </h1>
@@ -48,6 +49,17 @@ export default () => {
               style={{ marginTop: 20 }}
             >
               <span className="has-text-grey is-size-5">Loading</span>
+            </div>
+          ) : data.movies ? (
+            <div
+              className="columns is-multiline is-6"
+              style={{ position: "relative", top: -50 }}
+            >
+              {data.movies.map(movie =>
+                movie.medium_cover_image ? (
+                  <Movie key={movie.id} {...movie} />
+                ) : null
+              )}
             </div>
           ) : null}
         </div>
