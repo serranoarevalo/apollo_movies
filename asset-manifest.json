@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/apollo_movies/static/js/main.ef98ad77.chunk.js",
-    "main.js.map": "/apollo_movies/static/js/main.ef98ad77.chunk.js.map",
+    "main.js": "/apollo_movies/static/js/main.4a55e796.chunk.js",
+    "main.js.map": "/apollo_movies/static/js/main.4a55e796.chunk.js.map",
     "runtime-main.js": "/apollo_movies/static/js/runtime-main.d4b3c5b9.js",
     "runtime-main.js.map": "/apollo_movies/static/js/runtime-main.d4b3c5b9.js.map",
     "static/css/2.1c2325a6.chunk.css": "/apollo_movies/static/css/2.1c2325a6.chunk.css",
     "static/js/2.ee5d1634.chunk.js": "/apollo_movies/static/js/2.ee5d1634.chunk.js",
     "static/js/2.ee5d1634.chunk.js.map": "/apollo_movies/static/js/2.ee5d1634.chunk.js.map",
     "index.html": "/apollo_movies/index.html",
-    "precache-manifest.4b36727828a40e670d5687b0f5ad0d9c.js": "/apollo_movies/precache-manifest.4b36727828a40e670d5687b0f5ad0d9c.js",
+    "precache-manifest.f40c9147807c529ebb3d127cd96a54c8.js": "/apollo_movies/precache-manifest.f40c9147807c529ebb3d127cd96a54c8.js",
     "service-worker.js": "/apollo_movies/service-worker.js",
     "static/css/2.1c2325a6.chunk.css.map": "/apollo_movies/static/css/2.1c2325a6.chunk.css.map",
     "static/js/2.ee5d1634.chunk.js.LICENSE": "/apollo_movies/static/js/2.ee5d1634.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d4b3c5b9.js",
     "static/css/2.1c2325a6.chunk.css",
     "static/js/2.ee5d1634.chunk.js",
-    "static/js/main.ef98ad77.chunk.js"
+    "static/js/main.4a55e796.chunk.js"
   ]
 }
