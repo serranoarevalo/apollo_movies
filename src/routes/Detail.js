@@ -13,13 +13,16 @@ const GET_MOVIE = gql`
       language
       medium_cover_image
       genres
+      isLiked @client
     }
   }
 `;
 
 export default () => {
   const { id } = useParams();
-  const { loading, data } = useQuery(GET_MOVIE, { variables: { id } });
+  const { loading, data } = useQuery(GET_MOVIE, {
+    variables: { id: parseInt(id) }
+  });
   return (
     <div
       className="hero is-fullheight"
@@ -35,14 +38,16 @@ export default () => {
                 className="title has-text-white"
                 style={{ marginBottom: 40, fontSize: 60 }}
               >
-                {loading ? "Loading..." : data.movie.title}
+                {loading
+                  ? "Loading..."
+                  : `${data.movie.title} ${data.movie.isLiked ? "💖" : "💔"}`}
               </h1>
               {!loading && (
                 <div>
                   <h2 className="subtitle has-text-white is-size-3">
                     {data.movie.language} · {data.movie.rating}⭐️
                   </h2>
-                  <h4 class="subtitle has-text-white is-size-4 column is-paddingless is-half">
+                  <h4 className="subtitle has-text-white is-size-4 column is-paddingless is-half">
                     {data.movie.description_intro}
                   </h4>
                 </div>

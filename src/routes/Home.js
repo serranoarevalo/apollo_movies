@@ -8,6 +8,7 @@ const GET_MOVIES = gql`
     movies {
       id
       medium_cover_image
+      isLiked @client
     }
   }
 `;
@@ -31,7 +32,7 @@ export default () => {
               Apollo Movies
             </h1>
             <h2 className="subtitle has-text-white is-size-3">
-              I love Apollo and Bulma
+              I love Apollo and GraphQL
             </h2>
           </div>
         </div>

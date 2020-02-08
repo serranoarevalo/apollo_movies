@@ -1,8 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { gql } from "apollo-boost";
+import { useMutation } from "@apollo/react-hooks";
 
-function Movie({ id, medium_cover_image }) {
+const LIKE_MOVIE = gql`
+  mutation likeMovie($id: Int!) {
+    likeMovie(id: $id) @client
+  }
+`;
+
+const UNLIKE_MOVIE = gql`
+  mutation unLikeMovie($id: Int!) {
+    unLikeMovie(id: $id) @client
+  }
+`;
+
+function Movie({ id, medium_cover_image, isLiked }) {
+  const [likeMovie] = useMutation(LIKE_MOVIE, { variables: { id } });
+  const [unlikeMovie] = useMutation(UNLIKE_MOVIE, { variables: { id } });
   return (
     <div className="column is-one-fifth">
       <Link to={`/${id}`}>
@@ -16,6 +32,9 @@ function Movie({ id, medium_cover_image }) {
           }}
         ></div>
       </Link>
+      <button onClick={isLiked ? unlikeMovie : likeMovie}>
+        {isLiked ? "Unlike" : "Like"}
+      </button>
     </div>
   );
 }
